@@ -55,7 +55,7 @@ This project currently includes:
 
 ## AI Usage Disclaimer
 
-In this project, AI tools (such as ChatGPT) were used for:
+In this project, AI tools(ChatGPT) was used for:
 
 - Understanding statistical concepts (e.g., hypothesis testing, t-test, chi-square)
 - Debugging code and fixing errors
