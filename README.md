@@ -54,3 +54,15 @@ Tests performed:
 This project currently includes:
 - Exploratory Data Analysis
 - Hypothesis Testing
+
+---
+
+## AI Usage Disclaimer
+
+In this project, AI tools (such as ChatGPT) were used for:
+
+- Understanding statistical concepts (e.g., hypothesis testing, t-test, chi-square)
+- Debugging code and fixing errors
+- Structuring the project and improving explanations
+
+All analysis, interpretations, and final decisions were made by the author.
