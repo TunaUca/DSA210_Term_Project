@@ -47,3 +47,10 @@ Tests performed:
 ---
 
 ## Project Structure
+
+---
+
+## Status
+This project currently includes:
+- Exploratory Data Analysis
+- Hypothesis Testing
