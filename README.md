@@ -109,20 +109,45 @@ EDA was conducted to explore patterns before applying statistical methods.
 
 Statistical tests were conducted to evaluate relationships observed in the EDA.
 
-### Tests Applied
+### Hypotheses Tested
 
-* Independent T-Test:
-  * Free games vs paid games in terms of estimated downloads
+#### 1. Free vs Paid Games
 
-* Chi-Square Test:
-  * Game genre vs download category
+* Null Hypothesis: There is no significant difference in average estimated downloads between free and paid games.
+* Alternative Hypothesis: There is a significant difference in average estimated downloads between free and paid games.
+* Test Used: Independent t-test
+* Result: Reject H0
+* Interpretation: Free and paid games differ significantly in terms of estimated downloads. Free games tend to have higher downloads.
 
-### Results
+#### 2. Genre and Download Category
 
-* The independent t-test showed a statistically significant difference between free and paid games
-* Free games had significantly higher downloads on average
-* The chi-square test did not show a statistically significant relationship between genre and download category
-* This suggests that genre differences were visible in EDA, but not strongly supported by the chi-square test
+* Null Hypothesis: Game genre and download category are independent.
+* Alternative Hypothesis: Game genre and download category are not independent.
+* Test Used: Chi-square test
+* Result: Fail to reject H0
+* Interpretation: The chi-square test did not show a statistically significant relationship between genre and download category. Although genre differences were visible in EDA, they were not strongly supported by this test.
+
+#### 3. Review Score and Downloads
+
+* Null Hypothesis: There is no significant relationship between review score and estimated downloads.
+* Alternative Hypothesis: There is a significant relationship between review score and estimated downloads.
+* Test Used: Pearson correlation test
+* Result: Fail to reject H0
+* Interpretation: Review score did not show a statistically significant relationship with log-transformed estimated downloads. The correlation was very weak, meaning review score alone does not strongly explain game popularity.
+
+#### 4. Price and Downloads
+
+* Null Hypothesis: There is no significant relationship between game price and estimated downloads.
+* Alternative Hypothesis: There is a significant relationship between game price and estimated downloads.
+* Test Used: Pearson correlation test
+* Result: Fail to reject H0
+* Interpretation: Price did not show a statistically significant linear relationship with log-transformed estimated downloads. Although free games performed better than paid games in the t-test, price as a continuous variable was not a strong standalone predictor.
+
+### Overall Hypothesis Testing Result
+
+The hypothesis testing results show that price accessibility matters when comparing free and paid games. However, genre, review score, and price alone do not fully explain Steam game popularity.
+
+This suggests that game popularity is influenced by more complex factors such as marketing, brand recognition, community activity, visibility, and player trends.
 
 ---
 
@@ -160,7 +185,7 @@ A second model treats popularity as a classification task by labeling games as p
 
 ### Interpretation
 
-The machine learning results support the earlier EDA findings.
+The machine learning results support the earlier EDA and hypothesis testing findings.
 
 Price and review score alone are not strong predictors of game popularity. Steam game popularity is likely influenced by more complex factors such as genre, marketing, brand recognition, community activity, and player trends.
 
@@ -174,6 +199,7 @@ Price and review score alone are not strong predictors of game popularity. Steam
 * Price does not show a strong linear relationship with downloads
 * Genre differences are visible in EDA, especially for Action games
 * Genre was not statistically significant in the chi-square test
+* Review score was not significantly correlated with downloads
 * Machine learning models show that price and review score alone are weak predictors of popularity
 
 ---
@@ -208,8 +234,8 @@ Main dependencies:
 
 AI tools such as ChatGPT were used for:
 
-* Understanding statistical concepts such as hypothesis testing, t-test, chi-square, and machine learning evaluation
+* Understanding statistical concepts such as hypothesis testing, t-test, chi-square, Pearson correlation, and machine learning evaluation
 * Debugging code and fixing errors
 * Structuring the project and improving explanations
 
-All analysis, interpretations, and final decisions were made by the author.
+All analysis steps, decisions, and interpretations were made by the author.
