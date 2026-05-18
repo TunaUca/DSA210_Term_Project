@@ -89,11 +89,16 @@ Exploratory Data Analysis was conducted to understand the structure of the datas
 
 ---
 
-### 3.1 Distribution of Estimated Downloads
+### 3.1 Log Distribution of Estimated Downloads
 
 Estimated downloads were highly right-skewed. Most games had relatively low estimated downloads, while a small number of games had extremely high download counts.
 
-Because of this skewness, a logarithmic transformation was applied to estimated downloads. After applying the log transformation, the distribution became more balanced and easier to interpret.
+Because of this skewness, a logarithmic transformation was applied to estimated downloads.
+
+![Log Distribution of Estimated Downloads](fig1.png)
+
+**Figure 1: Log-transformed distribution of estimated downloads.**  
+After applying the log transformation, the distribution becomes more balanced and easier to interpret.
 
 This shows that Steam game popularity is unevenly distributed. A small number of highly successful games dominate the market, while most games attract smaller player bases.
 
@@ -101,11 +106,14 @@ This shows that Steam game popularity is unevenly distributed. A small number of
 
 ### 3.2 Price and Downloads
 
-A scatter plot was used in the EDA notebook to examine the relationship between price and log-transformed estimated downloads.
+A scatter plot was used to examine the relationship between price and log-transformed estimated downloads.
 
-The analysis did not show a strong linear relationship between price and downloads. Although price may affect accessibility, the relationship between price and popularity is not simple. Some free games reach very high download counts, but some paid games also perform well.
+![Price vs Log Downloads](fig2.png)
 
-This suggests that price alone is not enough to explain Steam game popularity.
+**Figure 2: Price vs log-transformed estimated downloads.**  
+The scatter plot does not show a strong linear relationship between price and downloads.
+
+Although price may affect accessibility, the relationship between price and popularity is not simple. Some free games reach very high download counts, but some paid games also perform well. This suggests that price alone is not enough to explain Steam game popularity.
 
 ---
 
@@ -120,7 +128,10 @@ To make the price analysis easier to interpret, games were grouped into price ca
 
 Average downloads were then compared across these categories.
 
-Free games had the highest average downloads. High-priced games also showed relatively strong download numbers compared to low and medium-priced games.
+![Average Downloads by Price Category](fig3.png)
+
+**Figure 3: Average downloads by price category.**  
+Free games have the highest average downloads. High-priced games also show relatively strong download numbers compared to low and medium-priced games.
 
 This suggests that free games benefit from accessibility, but expensive games can also succeed if they have other strong factors such as brand recognition, quality perception, or marketing.
 
@@ -130,17 +141,18 @@ This suggests that free games benefit from accessibility, but expensive games ca
 
 Average downloads were compared across game genres.
 
-Action games had the highest average downloads among genres. Indie, Strategy, and RPG games also performed relatively well.
+![Average Downloads by Genre](fig4.png)
 
-Some genres such as Racing had lower average downloads. This suggests that genre may influence popularity, but genre alone does not fully explain download behavior.
+**Figure 4: Average downloads by genre.**  
+Action games have the highest average downloads among genres. Indie, Strategy, and RPG games also perform relatively well.
+
+Some genres such as Racing and Early Access have lower average downloads. This suggests that genre may influence popularity, but genre alone does not fully explain download behavior.
 
 ---
 
 ### 3.5 EDA Summary
 
-The EDA shows that Steam game popularity is highly uneven. Free games tend to perform better in terms of downloads, and some genres such as Action appear more popular on average.
-
-However, visual patterns alone are not enough to prove statistical significance. Therefore, hypothesis testing was applied in the next stage.
+The EDA shows that Steam game popularity is highly uneven. Free games tend to perform better in terms of downloads, and some genres such as Action appear more popular on average. However, visual patterns alone are not enough to prove statistical significance. Therefore, hypothesis testing was applied in the next stage.
 
 ---
 
@@ -337,7 +349,7 @@ The main findings of this project are:
 
 ## 7. Limitations and Future Work
 
-This project has several limitations that should be considered when interpreting the results.
+This project has some limitations that should be considered when interpreting the results.
 
 First, after merging the two datasets, the final dataset contained 424 common games. Although this is sufficient for exploratory analysis, hypothesis testing, and basic machine learning models, it is smaller than the original datasets. Some games may not have matched because of differences in naming between the two sources.
 
